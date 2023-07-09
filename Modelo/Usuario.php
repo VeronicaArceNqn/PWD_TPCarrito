@@ -81,7 +81,7 @@ class Usuario extends BaseDatos
                 $this->setidusuario($elid);
                 $resp = true;
             } else {
-                $this->setmensajeoperacion("Especie->insertar: ".$this->getError());
+                $this->setmensajeoperacion("Usuario->insertar: ".$this->getError());
             }
         } else {
             $this->setmensajeoperacion("Usuario->insertar: ".$this->getError());

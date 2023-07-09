@@ -59,7 +59,7 @@ class UsuarioRol extends BaseDatos
                 }
             }
         } else {
-            $this->setmensajeoperacion("Especies->listar: ".$this->getError());
+            $this->setmensajeoperacion("Usuariorol->listar: ".$this->getError());
         }
         return $resp;
     
@@ -74,10 +74,10 @@ class UsuarioRol extends BaseDatos
                // $this->setidrol($elid);
                 $resp = true;
             } else {
-                $this->setmensajeoperacion("Especie->insertar: ".$this->getError());
+                $this->setmensajeoperacion("Usuariorol->insertar: ".$this->getError());
             }
         } else {
-            $this->setmensajeoperacion("Especie->insertar: ".$this->getError());
+            $this->setmensajeoperacion("Usuariorol->insertar: ".$this->getError());
         }
         return $resp;
     }
@@ -97,10 +97,10 @@ class UsuarioRol extends BaseDatos
             if ($this->Ejecutar($sql)) {
                 return true;
             } else {
-                $this->setmensajeoperacion("Especie->eliminar: ".$this->getError());
+                $this->setmensajeoperacion("Usuariorol->eliminar: ".$this->getError());
             }
         } else {
-            $this->setmensajeoperacion("Especie->eliminar: ".$this->getError());
+            $this->setmensajeoperacion("Usuariorol->eliminar: ".$this->getError());
         }
         return $resp;
     }
@@ -129,7 +129,7 @@ class UsuarioRol extends BaseDatos
             
         }
         else {
-           $this->setmensajeoperacion("Especie->listar: ".$this->getError());
+           $this->setmensajeoperacion("Usuariorol->listar: ".$this->getError());
         }
         }
         return $arreglo;

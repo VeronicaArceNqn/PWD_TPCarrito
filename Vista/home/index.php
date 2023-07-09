@@ -34,7 +34,7 @@
 
         $objCtrlProducto = new ABMproducto();
         //pasamos este parametro para mostrar solo productos con stock
-$param["enstock"]=0; 
+        $param["enstock"]=0; 
         $lista = $objCtrlProducto->buscar($param);
     ?>
 
