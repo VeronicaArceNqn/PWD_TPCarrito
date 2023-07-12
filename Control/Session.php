@@ -76,7 +76,7 @@ class Session{
     }
 
      /**
-     * Devuelve el rol del usuario logeado.
+     * Devuelve el rol del usuario logeado. Con el idusuario, darRoles devuelve uno o varios objetos usuariorol(todo un objeto usuario y un objeto rol)
      */
     public function getRol(){
         $list_rol = null;
@@ -117,6 +117,7 @@ class Session{
             $idrol =  $objUsuroles[$i]->getobjrol()->getidrol();
                 $objMenuRol = new ABMmenurol();
                 $param['idrol']=$idrol;
+                //obtengo los menú asociados al rol buscado
                 $arraymenusrol=$objMenuRol->buscar($param);
                     $j=0;
                     
