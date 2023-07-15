@@ -105,6 +105,16 @@ $this->cefechafin = $cefechafin;
 //return $this;
 }
 
+public function getObjUsuario()
+{
+return $this->objUsuario;
+}
+
+public function setObjUsuario($objUsuario)
+{
+$this->objUsuario = $objUsuario;
+}
+
 public function getmensajeoperacion(){
   return $this->mensajeoperacion;
 }
@@ -244,15 +254,7 @@ public function cargar() {
   }
   
 
-public function getObjUsuario()
-{
-return $this->objUsuario;
-}
 
-public function setObjUsuario($objUsuario)
-{
-$this->objUsuario = $objUsuario;
-}
 }
 
 

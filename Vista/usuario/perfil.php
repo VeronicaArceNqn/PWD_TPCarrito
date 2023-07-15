@@ -30,17 +30,17 @@ $datos["idusuario"]=$idusuario;
         <div class="card bg-white">
           <div class="card-body p-5">
             <form id="ff" class="mb-3 mt-md-4">
-              <h5 class="fw-bold mb-2 text-uppercase text-center">Mis datos</h5>
+              <h5 class="fw-bold mb-2 text-center">Mis datos de perfil</h5>
               <div class="mb-3">
                 <label for="usnombre" class="form-label ">Nombre</label>
                 <input type="text" class="form-control" id="usnombre" name="usnombre" value="<?php echo $obj->getusnombre()?>"readonly>
               </div>
               <div class="mb-3">
-                <label for="uspass" class="form-label ">Email</label>
+                <label for="usmail" class="form-label ">Correo electrónico</label>
                 <input type="email" class="form-control" id="usmail" name="usmail" value="<?php echo $obj->getusmail()?>" readonly>
               </div>
               <div class="mb-3">
-                <label for="password" class="form-label ">Password</label>
+                <label for="password" class="form-label ">Contraseña</label>
                 <input type="hidden" class="form-control" id="uspass" name="uspass">
                 <input type="hidden" class="form-control" id="usdeshabilitado" name="usdeshabilitado" value="<?php echo $obj->getusdeshabilitado()?>">
                 <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese nueva contraseña" value="*******" readonly>
@@ -48,13 +48,14 @@ $datos["idusuario"]=$idusuario;
 
               <div class="d-grid">
                 <button id="btnEditar"class="btn btn-dark" type="button" onclick="editar();">Presione aqui para editar</button>
-                <button id="btnEnviar" class="btn btn-success" type="button" onclick="actualizar();" hidden>Enviar</button>
+                <button id="btnEnviar" class="btn btn-success" type="button" onclick="actualizar();" hidden>Registrar cambios</button>
               </div>
             </form>
            
 
           </div>
         </div>
+        <a class="btn btn-warning mt-4" role="button" href="../home/paginaSegura.php" >Continuar con la compra </a>
       </div>
     </div>
   </div>

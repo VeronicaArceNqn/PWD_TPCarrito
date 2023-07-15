@@ -5,8 +5,8 @@ include_once '../../../configuracion.php';
 $datos = data_submitted();
 
 
-$objTrans = new Session();
-$resp = $objTrans->cerrar();
+$objSession = new Session();
+$resp = $objSession->cerrar();
 $respuesta=false;
 if ($resp) {
     $respuesta=true;
@@ -22,7 +22,4 @@ if (isset($mensaje)) {
     $retorno['Msg'] = $mensaje;
 }
 echo json_encode($retorno);
-        
-
-    
-//include_once $dir.'../estructura/pie.php';   
+         

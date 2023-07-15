@@ -13,22 +13,22 @@ include($dir . "../estructura/header.php");
             <form id="ff" class="mb-3 mt-md-4">
               <h5 class="fw-bold mb-2 text-uppercase text-center">Registrarse</h5>
               <div class="mb-3">
-                <label for="usnombre" class="form-label ">Nombre</label>
+                <label for="usnombre" class="form-label ">Nombre de usuario</label>
                 <input type="text" class="form-control" id="usnombre" name="usnombre">
               </div>
               <div class="mb-3">
-                <label for="uspass" class="form-label ">Email</label>
+                <label for="usmail" class="form-label ">Correo Electrónico</label>
                 <input type="email" class="form-control" id="usmail" name="usmail">
               </div>
               <div class="mb-3">
-                <label for="password" class="form-label ">Password</label>
+                <label for="password" class="form-label ">Contraseña</label>
                 <input type="hidden" class="form-control" id="uspass" name="uspass">
                 <input type="hidden" class="form-control" id="usdeshabilitado" name="usdeshabilitado" value="null">
-                <input type="password" class="form-control" id="password" name="password" placeholder="*******">
+                <input type="password" class="form-control" id="password" name="password" placeholder="">
               </div>
 
               <div class="d-grid">
-                <button class="btn btn-outline-dark" type="button" onclick="registrar()">Enviar</button>
+                <button class="btn btn-outline-dark" type="button" onclick="registrar()">Guardar</button>
               </div>
             </form>
             <div>
@@ -41,6 +41,7 @@ include($dir . "../estructura/header.php");
     </div>
   </div>
 </div>
+<a href="../home/index.php" class="easyui-linkbutton" style="padding:5px; background-color:#0d6efd;color:white;" data-options="plain:true">Volver a Inicio</a>
 <?php
 
 include($dir . "../estructura/footer.php");

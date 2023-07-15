@@ -23,7 +23,7 @@ include_once $dir."../estructura/headerSeguro.php";
                     <tr>
                         <th scope="col">ID compra</th>
                         <th scope="col">Fecha</th>
-                        <th scope="col">Estado</th>
+                        <th scope="col">Estado de la compra</th>
                         <th scope="col"></th>
                           <!--<th scope="col"></th>
                         -->                
@@ -100,13 +100,15 @@ include_once $dir."../estructura/headerSeguro.php";
 </section>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         </div>
     </div>
   </div>
 </div>
 </div>
+
 </div>
+<a class="btn btn-warning m-4" role="button" href="../home/paginaSegura.php" >Continuar con la compra </a>
 </div>
 <div>
 

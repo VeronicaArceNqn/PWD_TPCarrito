@@ -52,7 +52,7 @@ function comprar(mensaje, idcompraestadotipo) {
 function eliminarItem(idproducto, idcompraitem, cicantidad) {
   //var row = $('#dg').datagrid('getSelected');
 
-  $.messager.confirm('Confirm', 'Seguro que desea eliminar el menu?', function(r) {
+  $.messager.confirm('Confirm', 'Seguro que desea eliminar el producto?', function(r) {
     if (r) {
       $.post('accion/eliminar_item_carrito.php?idproducto=' + idproducto + '&idcompraitem=' + idcompraitem + '&cicantidad=' + cicantidad,
         function(result) {

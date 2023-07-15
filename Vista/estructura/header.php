@@ -10,22 +10,22 @@ $dir="";
 <head>
 <meta charset="UTF-8">
 <title><?php echo $titulo;?></title>
-<link rel="stylesheet" type="text/css" href="../css/style.css"><link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.10.8/themes/bootstrap/easyui.css">
-<link rel = "icon" href = 
-    "../css/images/icon-sis.png" 
-            type = "image/x-icon">
-<link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.10.8/themes/icon.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css"><link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.10.8/themes/bootstrap/easyui.css">
+  <link rel = "icon" href = 
+      "../css/images/icon-sis.png" 
+              type = "image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.10.8/themes/icon.css">
 
-<link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.10.8/themes/color.css">
-<link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.10.8/demo/demo.css">
+  <link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.10.8/themes/color.css">
+  <link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.10.8/demo/demo.css">
 
-<script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 
-<script type="text/javascript" src="../js/jquery-easyui-1.10.8/jquery.min.js"></script>
-<script type="text/javascript" src="../js/jquery-easyui-1.10.8/jquery.easyui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+  <script type="text/javascript" src="../js/jquery-easyui-1.10.8/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-easyui-1.10.8/jquery.easyui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
 </head>
 <body class="easyui-layout">
 <div data-options="region:'north',border:false" style="min-height:210px;height:auto; padding:10px">
@@ -43,12 +43,12 @@ $dir="";
   <div data-options="region:'center'" style="padding:0px; color:white; width:auto; height:18px;">
             <div class="easyui-layout" data-options="fit:true" >               
                 <div data-options="region:'west'" style="width:60%; background-color:#0d6efd;">
-                <a href="../home/index.php" class="easyui-linkbutton"  style="padding:5px;margin:3px; background-color:#0d6efd;color:white;" data-options="plain:true">Home</a>
+                <a href="../home/index.php" class="easyui-linkbutton"  style="padding:5px;margin:4px; background-color:#0d6efd;color:white;" data-options="plain:true">Inicio</a>
               </div>
                   
                 <div data-options="region:'center'" style="background-color:#0d6efd; text-align:end">
-                    <a href="../usuario/registrarseB.php" class="easyui-linkbutton"  style="padding:5px; margin:3px; background-color:#0d6efd;color:white;" data-options="plain:true">Registrarse</a>
-        <a href="../login/index.php" class="easyui-linkbutton"  style="padding:5px; margin:3px; background-color:#0d6efd;color:white;" data-options="plain:true">Iniciar sesi&oacute;n</a>
+                    <a href="../usuario/registrarseB.php" class="easyui-linkbutton"  style="padding:5px; margin:4px; background-color:#0d4efd;color:white;" data-options="plain:true">Registrarse</a>
+        <a href="../login/index.php" class="easyui-linkbutton"  style="padding:5px; margin:4px; background-color:#0d4efd;color:white;" data-options="plain:true">Ingresar</a>
                 </div>
             </div>
         </div>

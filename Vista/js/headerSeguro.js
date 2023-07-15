@@ -6,7 +6,7 @@
             if (r){
                 $.post('../login/accion/cerrarSesion.php',
                    function(result){
-                 //  	 alert("Volvio Serviodr");  
+                 //  	 alert("Volvio Servidor");  
 
                     if (result.respuesta){
                            

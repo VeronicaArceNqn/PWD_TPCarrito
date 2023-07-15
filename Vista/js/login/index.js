@@ -14,14 +14,15 @@ function iniciarSesion() {
         return $(this).form('validate');
       },
       success: function(result) {
+        
         var result = eval('(' + result + ')');
       
         if (!result.respuesta) {
           $.messager.show({
             title: 'Error',
-            msg: result.errorMsg
+            msg: "Intente de nuevo"
           });
-          location.href = '../login/index.php?msg='+result.errorMsg;
+          location.href = '../login/index.php?msg=Intente de nuevo';
         } else {
           $.messager.show({
             title: '......Iniciando sesión......',

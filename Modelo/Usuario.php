@@ -33,16 +33,26 @@ class Usuario extends BaseDatos
         $this->setusdeshabilitado($usdeshabilitado);
     }
 
-    public function getidusuario(){  return $this->idusuario;}
-    public function setidusuario($idusuario){     $this->idusuario = $idusuario;    }
-    public function getusnombre(){      return $this->usnombre;     }
-    public function setusnombre($usnombre){  $this->usnombre = $usnombre;    }
-    public function getuspass(){  return $this->uspass;}
-    public function setuspass($uspass){     $this->uspass = $uspass;    }
-    public function getusmail(){      return $this->usmail;     }
-    public function setusmail($usmail){  $this->usmail = $usmail;    }
-    public function getusdeshabilitado(){      return $this->usdeshabilitado;     }
-    public function setusdeshabilitado($usdeshabilitado){  $this->usdeshabilitado = $usdeshabilitado;    }
+    public function getidusuario(){  
+        return $this->idusuario;}
+    public function setidusuario($idusuario){     
+        $this->idusuario = $idusuario;    }
+    public function getusnombre(){      
+        return $this->usnombre;     }
+    public function setusnombre($usnombre){  
+        $this->usnombre = $usnombre;    }
+    public function getuspass(){  
+        return $this->uspass;}
+    public function setuspass($uspass){     
+        $this->uspass = $uspass;    }
+    public function getusmail(){      
+        return $this->usmail;     }
+    public function setusmail($usmail){  
+        $this->usmail = $usmail;    }
+    public function getusdeshabilitado(){      
+        return $this->usdeshabilitado;     }
+    public function setusdeshabilitado($usdeshabilitado){  
+        $this->usdeshabilitado = $usdeshabilitado;    }
     
     public function getmensajeoperacion(){
         return $this->mensajeoperacion;
