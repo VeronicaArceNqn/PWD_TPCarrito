@@ -2,12 +2,12 @@ $(document).ready(function(){
     cargarRoles();
      });
 
-     function cargarRoles()
+function cargarRoles()
      {
        $("#listaroles").load('accion/listar_rol.php?idusuario='+$("#idusuario").val());
     
      }
-       function darRol(idrol,idusuario) {
+function darRol(idrol,idusuario) {
 var jqxhr = $.post('accion/dar_rol.php?idrol='+idrol+"&idusuario="+idusuario, function() {
   // alert( "success" );
  })
@@ -21,7 +21,7 @@ var jqxhr = $.post('accion/dar_rol.php?idrol='+idrol+"&idusuario="+idusuario, fu
    } else {
      $.messager.alert({
        title: 'Mensaje',
-       msg: " se asignó nuevo rol true:"+result.respuesta
+       msg: " Se asignó nuevo rol correctamente"
      });
      cargarRoles();
     //window.location.href = window.location.href;
@@ -58,7 +58,7 @@ var jqxhr = $.post('accion/eliminar_rol.php?idrol='+idrol+"&idusuario="+idusuari
    } else {
      $.messager.alert({
        title: 'Mensaje',
-       msg: " se eliminó el rol true:"+result.respuesta
+       msg: " Se eliminó el rol correctamente"
      });
      cargarRoles();
      //window.location.href = window.location.href;

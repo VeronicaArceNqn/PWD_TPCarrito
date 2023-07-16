@@ -113,9 +113,9 @@ if ($resp && $permisosOk) {
 												}
 												echo '<a href="'.$objMenu->getMedescripcion().'" class="easyui-linkbutton" style="padding:5px;margin:4px; background-color:#0d6efd;color:white;" data-options="plain:true">'.$nombre.'</a>'; 
 											}elseif ($rodescrip == "Administrador"){
-												echo '<a href="'.$objMenu->getMedescripcion().'" class="easyui-linkbutton" style="padding:5px; background-color:#0d6efd;color:white;" data-options="plain:true">'.$nombre.'</a>'; 
+												echo '<a href="'.$objMenu->getMedescripcion().'" class="easyui-linkbutton" style="padding:5px;margin:4px;background-color:#0d6efd;color:white;" data-options="plain:true">'.$nombre.'</a>'; 
 											}	elseif ($rodescrip == "Deposito"){
-												echo '<a href="'.$objMenu->getMedescripcion().'" class="easyui-linkbutton" style="padding:5px; background-color:#0d6efd;color:white;" data-options="plain:true">'.$nombre.'</a>'; 
+												echo '<a href="'.$objMenu->getMedescripcion().'" class="easyui-linkbutton" style="padding:5px;margin:4px;background-color:#0d6efd;color:white;" data-options="plain:true">'.$nombre.'</a>'; 
 										}
 
 										}

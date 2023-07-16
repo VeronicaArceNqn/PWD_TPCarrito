@@ -12,13 +12,9 @@ if (isset($data['idusuario'])){
         $objUsuario = $objC->alta_rol($data);
         if ($objUsuario==null){
             $mensaje = " La accion  DAR ROL No pudo concretarse";
-            
         }
         else{
-            
-                $respuesta=true;
-             
-         
+            $respuesta=true;
         }
 }
 $retorno['respuesta'] = $respuesta;
