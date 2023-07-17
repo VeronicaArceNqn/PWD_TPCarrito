@@ -24,7 +24,7 @@ function saveProduct(){
         success: function(result){
             var result = eval('('+result+')');
 
-            alert("Volvio Serviodr:"+result.respuesta); 
+            alert("Volvio Servidor:"+result.respuesta); 
            
             if (!result.respuesta){
                 $.messager.show({
@@ -52,7 +52,7 @@ function destroyProducto(){
             if (r){
                 $.post('accion/eliminar_producto.php?idproducto='+row.idproducto,{idproducto:row.id},
                    function(result){
-                        alert("Volvio Serviodr");   
+                        alert("Volvio Servidor");   
                      if (result.respuesta){
                             
                         $('#dg').datagrid('reload');    // reload the  data
