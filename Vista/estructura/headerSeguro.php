@@ -36,7 +36,7 @@ if ($resp && $permisosOk) {
 	<link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.10.8/themes/color.css">
 	<link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.10.8/demo/demo.css">
 
-	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 
 	<script type="text/javascript" src="../js/jquery-easyui-1.10.8/jquery.min.js"></script>

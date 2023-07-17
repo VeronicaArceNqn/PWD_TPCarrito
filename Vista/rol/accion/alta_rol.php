@@ -1,9 +1,9 @@
 <?php
 
 $titulo = "Rol nuevo";
-include_once '../estructura/cabecera.php';
-//include_once '/xampp/htdocs/Login/vista/utiles/funciones.php';
-include_once '../../configuracion.php';
+include_once $dir."../estructura/headerSeguro.php";
+
+
 ?>
 <div class="container-fluid principal ml-2 p-4">
     <?php
@@ -55,5 +55,5 @@ include_once '../../configuracion.php';
 </div>
 
 <?php
-include_once '../estructura/pie.php';
+include_once $dir."../estructura/footer.php";
 ?>

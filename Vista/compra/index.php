@@ -9,7 +9,7 @@ $suma = 0;
   <div class="container">
 
     <div id="contenido" class="content">
-
+    <!-- Aquí se cargan los producto seleccionados para comprar -->
     </div>
 
 </section>

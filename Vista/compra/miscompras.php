@@ -10,8 +10,6 @@ include_once $dir."../estructura/headerSeguro.php";
    <h3 class="text-center">Mis compras</h3>
     <div class="row text-muted m-0">
         <?php 
-        
-        
         $objAbmcompra = new ABMcompra();
         $param["idusuario"]=$idusuario;
         $listacompra = $objAbmcompra->buscar($param);
@@ -25,13 +23,10 @@ include_once $dir."../estructura/headerSeguro.php";
                         <th scope="col">Fecha</th>
                         <th scope="col">Estado de la compra</th>
                         <th scope="col"></th>
-                          <!--<th scope="col"></th>
-                        -->                
                     </tr>
                 </thead>
                 <tbody>
-                <?php
-                    
+                  <?php
                     foreach ($listacompra as $objCompra) {                         
                         $idcompra=$objCompra->getIdcompra();
                         $param["idusuario"] =$idusuario;
@@ -57,61 +52,46 @@ include_once $dir."../estructura/headerSeguro.php";
                            <td>'.$estado.'</td>';
                            echo '<td>'?><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick=" cargarCompra(<?php echo  $idcompra?>,<?php echo  $idcompraestado?>);">
                            Ver compra
-                          </button><?php echo'</td>';
-                         
-                         
+                          </button><?php echo'</td>';                        
                               echo'</tr>';
-                     
                         }
-                        
-                       
-                        
                      }
                     //fin foreach
-                    echo '    </tbody>
-                    </table>';
-                }
-                else{
-
-                    echo "<h3>No tiene compras registradas </h3>";
-                }
-                
+                echo '</tbody>
+            </table>';
+        }
+        else{
+            echo "<h3>No tiene compras registradas </h3>";
+        }
                 ?>
-            
         <!-- Button trigger modal -->
 
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Compra </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <section class="shopping-cart dark">
-  <div class="container">
-   
-    <div id="contenido"class="content">
-    
-    </div>
-    
-</section>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Compra </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <section class="shopping-cart dark">
+              <div class="container">
+                <div id="contenido"class="content">
+        
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </div>
-</div>
-
-</div>
 <a class="btn btn-warning m-4" role="button" href="../home/paginaSegura.php" >Continuar con la compra </a>
-</div>
-<div>
-
 
 <?php
 include ("../../Vista/estructura/footer.php");
