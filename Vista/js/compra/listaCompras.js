@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    listarCompras();
+    listarCompras();    
    }); 
   function listarCompras(){
     $("#compras").load('accion/listar_compras.php');
@@ -15,6 +15,7 @@ $(document).ready(function(){
 //Ocultar modal
 var genericModalEl = document.getElementById('exampleModal')
         var modal = bootstrap.Modal.getInstance(genericModalEl)
+        var msj = mensaje;
       
     var jqxhr = $.post('accion/agregar_estado.php?idcompra='+idcompra+"&idcompraestado="+idcompraestado+"&idcompraestadotipo="+idcompraestadotipo+"&idusuario="+idusuario, function() {
         //alert( "success" );
@@ -31,9 +32,10 @@ var genericModalEl = document.getElementById('exampleModal')
             title: 'Mensaje',
             msg: mensaje 
           });
-          modal.hide()
+          //modal.hide()
         //  $("#exampleModal").modal("dismiss");
-           listarCompras();
+        location.href = 'email.php?mensaje='+mensaje+'&idcompra='+idcompra+"&idcompraestado="+idcompraestado+"&idcompraestadotipo="+idcompraestadotipo+"&idusuario="+idusuario;
+        enviarCorreo();
            
         }
       })
@@ -52,4 +54,4 @@ var genericModalEl = document.getElementById('exampleModal')
       });
 
     
-  }
+  }  

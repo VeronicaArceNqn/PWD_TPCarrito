@@ -3,6 +3,7 @@ function newProducto(){
     $('#dlg').dialog('open').dialog('center').dialog('setTitle','Nuevo Producto');
     $('#fm').form('clear');
     urlDatos = 'accion/alta_producto.php';
+    
 }
 
 function editProducto(){
@@ -15,7 +16,7 @@ function editProducto(){
     }
 }
 function saveProduct(){
-    //alert(urlDatos);
+    alert(urlDatos);
     $('#fm').form('submit',{
         url: urlDatos,
         onSubmit: function(){
@@ -24,7 +25,7 @@ function saveProduct(){
         success: function(result){
             var result = eval('('+result+')');
 
-            alert("Volvio Servidor:"+result.respuesta); 
+            //alert("Volvio Servidor:"+result.respuesta); 
            
             if (!result.respuesta){
                 $.messager.show({
@@ -33,7 +34,7 @@ function saveProduct(){
                 });
             } else {
                 
-            alert("cerramos ventana"); 
+            //alert("cerramos ventana"); 
            
                //cerramos el dialog
                 $('#dlg').dialog('close');

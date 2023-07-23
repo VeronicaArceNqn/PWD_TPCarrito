@@ -10,9 +10,14 @@ $data["precio"]=10000;
 $data["procantstock"]=10;
 $data["tipo"]="Camaras";
 $data["urlimagen"]="https://i.ibb.co/ygNPwx6/c4.webp";
-*/if (isset($data['pronombre'])){
+*/
+if (isset($data['pronombre'])){
     $objC = new ABMproducto();
     $respuesta = $objC->alta($data);
+    if (!$respuesta){
+      $mensaje = " La accion  ALTA No pudo concretarse";
+      
+  }
 
   //  $retorno['entra'] = "si entro";
 }

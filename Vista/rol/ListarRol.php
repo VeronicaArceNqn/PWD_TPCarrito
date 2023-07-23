@@ -2,20 +2,18 @@
 $dir="";
 $titulo = "Lista Roles";
 include_once $dir."../estructura/headerSeguro.php";
-
+include_once '../../configuracion.php';
 
 ?>
-<link rel="stylesheet" href="../vista/css/bootstrap/4.5.2/bootstrap.min.css">
 <div class="container border border-secondary principal mt-3 pt-3">
    <h3 class="text-center">Listado de Roles</h3>
     <div class="row text-muted m-0">
-        <?php 
-        
+        <?php         
         
         $objAbmRol = new ABMrol();
 
         $listaRol = $objAbmRol->buscar(null);
-        //print_r($listaRol);
+       
         if(count($listaRol)>0){
             ?>
             <table class="table table-light table-striped text-center table-hover" cellspacing="0" width="100%">
@@ -35,10 +33,9 @@ include_once $dir."../estructura/headerSeguro.php";
                         <th scope="row">'.$objRol->getIdrol().'</th>';
                         echo '
                         <td>'.$objRol->getRodescripcion().'</td>';
-                        //echo '<td><a href="editarRol.php?accion=editar&idrol='.$objRol->getRodescripcion().'" class="btn btn-success">Editar</a></td>';
-                        echo '<td><a href="accionBorradoLogico.php?accion=borradoLogico&idrol='.$objRol->getIdrol().'" class="btn btn-warning">Deshabilitar</a></td>';
+                        echo '<td><a href="accionBorradoLogico.php?accion=borradoLogico&idrol='.$objRol->getIdrol().'" class="btn btn-dark">Deshabilitar</a></td>';
                        
-                           echo'</tr>';
+                        echo'</tr>';
                   
                      }
                     //fin foreach
@@ -51,14 +48,11 @@ include_once $dir."../estructura/headerSeguro.php";
                 }
                 
                 ?>
-            
-        
-</div>
-<a href="formRol.php" class="btn btn-primary mb-4">Ingresar nuevo rol</a>
+    </div>
+    <a href="formRol.php" class="btn btn-primary mb-4">Ingresar nuevo rol</a>
 
 </div>
-<div>
+
 <?php
-include_once $dir."../estructura/footer.php";
+include ("../../Vista/estructura/footer.php");
 ?>
-</div>

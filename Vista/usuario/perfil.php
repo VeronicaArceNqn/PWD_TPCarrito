@@ -55,7 +55,7 @@ $datos["idusuario"]=$idusuario;
 
           </div>
         </div>
-        <a class="btn btn-warning mt-4" role="button" href="../home/paginaSegura.php" >Continuar con la compra </a>
+        <a class="btn btn-primary mt-4" role="button" href="../home/paginaSegura.php" >Volver </a>
       </div>
     </div>
   </div>

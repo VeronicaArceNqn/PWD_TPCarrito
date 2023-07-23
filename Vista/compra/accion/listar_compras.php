@@ -3,7 +3,7 @@ include_once "../../../configuracion.php";
 $objAbmcompra = new ABMcompra();
 $param=null;
 $listacompra = $objAbmcompra->buscar($param);
-//print_r($listaUsuario);
+//print_r($listacompra);
 if(count($listacompra)>0){
   ?>
   <table class="table table-light table-striped text-center table-hover" cellspacing="0" width="100%">
@@ -13,6 +13,7 @@ if(count($listacompra)>0){
           <th scope="col">Fecha</th>
           <th scope="col">Estado de la compra</th>
           <th scope="col">Id usuario</th>
+          <th scope="col">Id Nombre</th>
           <th scope="col"></th>
       </tr>
     </thead>
@@ -31,11 +32,13 @@ if(count($listacompra)>0){
                 $estado=$arreCE[0]->getObjcompraestadotipo()->getCetdescripcion();
                 $idcompraestado=$arreCE[0]->getIdcompraestado();
                 $idusuarioc=$arreCE[0]->getObjusuario()->getidusuario();
+                $usnombre=$arreCE[0]->getObjusuario()->getusnombre();
                 echo '<tr>
                     <th scope="row">'.$idcompra.'</th>';
                     echo '<td>'.$objCompra->getCofecha().'</td>';
                     echo '<td>'.$estado.'</td>';
                     echo '<td>'.$idusuarioc.'</td>';
+                    echo '<td>'.$usnombre.'</td>';
                     echo '<td>'?><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick=" cargarCompra(<?php echo  $idcompra?>,<?php echo  $idcompraestado?>,<?php echo  $idusuarioc?>);">Revisar</button>
                    <?php 
                     echo'</td>';
