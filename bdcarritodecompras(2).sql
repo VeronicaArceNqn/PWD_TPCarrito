@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-07-2023 a las 04:55:12
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 8.1.10
+-- Tiempo de generación: 24-07-2023 a las 23:06:18
+-- Versión del servidor: 10.4.20-MariaDB
+-- Versión de PHP: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,11 +38,11 @@ CREATE TABLE `compra` (
 --
 
 INSERT INTO `compra` (`idcompra`, `cofecha`, `idusuario`) VALUES
-(2, '2022-12-02 01:28:17', 24),
-(3, '2022-12-02 06:22:52', 23),
-(4, '2022-12-03 01:22:27', 23),
-(5, '2022-12-03 01:24:13', 23),
-(6, '2022-12-05 00:12:51', 23);
+(2, '2022-12-02 01:28:17', 4),
+(3, '2022-12-02 06:22:52', 3),
+(4, '2022-12-03 01:22:27', 3),
+(5, '2022-12-03 01:24:13', 3),
+(11, '2023-07-23 08:38:21', 4);
 
 -- --------------------------------------------------------
 
@@ -64,22 +64,21 @@ CREATE TABLE `compraestado` (
 --
 
 INSERT INTO `compraestado` (`idcompraestado`, `idcompra`, `idcompraestadotipo`, `cefechaini`, `cefechafin`, `idusuario`) VALUES
-(4, 2, 0, '2022-12-02 01:28:17', '2022-12-02 01:29:38', 24),
-(5, 2, 1, '2022-12-02 01:29:38', '2022-12-02 01:34:56', 24),
-(6, 2, 2, '2022-12-02 01:34:56', NULL, 24),
-(7, 3, 0, '2022-12-02 06:22:52', '2022-12-02 06:23:39', 23),
-(8, 3, 1, '2022-12-02 06:23:39', '2022-12-05 00:12:15', 23),
-(9, 4, 0, '2022-12-03 01:22:27', '2022-12-03 01:22:59', 23),
-(10, 4, 1, '2022-12-03 01:22:59', '2022-12-03 01:23:30', 23),
-(11, 4, 2, '2022-12-03 01:23:30', '2022-12-03 01:23:43', 23),
-(12, 4, 3, '2022-12-03 01:23:43', '2022-12-03 01:23:52', 23),
-(13, 4, 4, '2022-12-03 01:23:52', NULL, 23),
-(14, 5, 0, '2022-12-03 01:24:13', '2022-12-03 01:24:40', 23),
-(15, 5, 1, '2022-12-03 01:24:39', '2022-12-03 01:24:55', 23),
-(16, 5, 4, '2022-12-03 01:24:55', NULL, 23),
-(17, 3, 4, '2022-12-05 00:12:15', NULL, 23),
-(18, 6, 0, '2022-12-05 00:12:51', '2022-12-05 00:14:46', 23),
-(19, 6, 1, '2022-12-05 00:14:46', NULL, 23);
+(4, 2, 0, '2022-12-02 01:28:17', '2022-12-02 01:29:38', 4),
+(5, 2, 1, '2022-12-02 01:29:38', NULL, 4),
+(7, 3, 0, '2022-12-02 06:22:52', '2022-12-02 06:23:39', 3),
+(8, 3, 1, '2022-12-02 06:23:39', '2023-07-23 19:39:55', 3),
+(9, 4, 0, '2022-12-03 01:22:27', '2022-12-03 01:22:59', 3),
+(10, 4, 1, '2022-12-03 01:22:59', '2022-12-03 01:23:30', 3),
+(11, 4, 2, '2022-12-03 01:23:30', NULL, 3),
+(14, 5, 0, '2022-12-03 01:24:13', '2022-12-03 01:24:40', 3),
+(15, 5, 1, '2022-12-03 01:24:39', '2023-07-23 19:38:56', 3),
+(146, 11, 0, '2023-07-23 08:38:21', '2023-07-23 08:39:38', 4),
+(147, 11, 1, '2023-07-23 08:39:37', '2023-07-23 08:42:24', 4),
+(148, 11, 4, '2023-07-23 08:42:24', NULL, 4),
+(149, 5, 2, '2023-07-23 19:38:53', '2023-07-23 20:10:45', 3),
+(150, 3, 2, '2023-07-23 19:39:55', NULL, 3),
+(151, 5, 3, '2023-07-23 20:10:41', NULL, 3);
 
 -- --------------------------------------------------------
 
@@ -127,7 +126,7 @@ INSERT INTO `compraitem` (`idcompraitem`, `idproducto`, `idcompra`, `cicantidad`
 (5, 2, 3, 1),
 (6, 1, 4, 1),
 (7, 1, 5, 1),
-(8, 2, 6, 1);
+(23, 1, 11, 20);
 
 -- --------------------------------------------------------
 
@@ -148,10 +147,10 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`idmenu`, `menombre`, `medescripcion`, `idpadre`, `medeshabilitado`) VALUES
-(7, 'Home', '../home/paginaSegura.php', NULL, NULL),
+(7, 'Inicio', '../home/paginaSegura.php', NULL, NULL),
 (11, 'Mi perfil', '#', NULL, NULL),
-(12, 'Mis datos', '../usuario/perfil.php', 11, '2022-12-03 09:17:54'),
-(13, 'Cambiar Datos', '../usuario/cambiardatos.php', 11, NULL),
+(12, 'Mi perfil', '../usuario/perfil.php', 11, NULL),
+(13, 'Cambiar Datos', '../usuario/cambiardatos.php', 11, '2023-07-13 12:06:40'),
 (14, 'Mis compras', '../compra/miscompras.php', 11, NULL),
 (15, 'Administrar', '#', NULL, NULL),
 (16, 'Gestión de Menú', '../menu/listaMenu.php', 15, NULL),
@@ -163,7 +162,12 @@ INSERT INTO `menu` (`idmenu`, `menombre`, `medescripcion`, `idpadre`, `medeshabi
 (24, 'Carrito', '#', NULL, NULL),
 (25, 'Compra', '../compra/index.php', NULL, NULL),
 (29, 'Asignar Menú', '../menu/asignarMenu.php', NULL, '2022-12-04 12:07:46'),
-(30, 'Asignar Rol', '../usuario/asignarRol.php', NULL, '2022-12-04 12:08:40');
+(30, 'Asignar Rol', '../usuario/asignarRol.php', NULL, '2022-12-04 12:08:40'),
+(31, 'Gestión de Rol', '../rol/ListarRol.php', 15, NULL),
+(32, 'Nuevo Rol', '../rol/formRol.php', 15, '2023-07-17 15:38:41'),
+(33, 'Enviar correo', '../compra/accion/email.php', 21, '2023-07-23 04:54:50'),
+(34, 'Gestión de Correo', '../compra/enviarEmail.php', 21, '2023-07-23 04:54:55'),
+(35, 'Correo', '../compra/email.php', 21, '2023-07-23 04:55:01');
 
 -- --------------------------------------------------------
 
@@ -181,9 +185,13 @@ CREATE TABLE `menurol` (
 --
 
 INSERT INTO `menurol` (`idmenu`, `idrol`) VALUES
+(7, 1),
 (7, 2),
+(7, 3),
 (11, 2),
+(12, 1),
 (12, 2),
+(12, 3),
 (13, 2),
 (14, 2),
 (15, 1),
@@ -196,7 +204,13 @@ INSERT INTO `menurol` (`idmenu`, `idrol`) VALUES
 (24, 2),
 (25, 2),
 (29, 1),
-(30, 1);
+(30, 1),
+(31, 1),
+(32, 1),
+(33, 1),
+(33, 3),
+(34, 3),
+(35, 3);
 
 -- --------------------------------------------------------
 
@@ -219,16 +233,16 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`idproducto`, `pronombre`, `prodetalle`, `procantstock`, `tipo`, `precio`, `urlimagen`) VALUES
-(1, 'DAHUA', 'Camara 2mpx', 5, 'Camaras', '23000', 'https://i.ibb.co/ygNPwx6/c4.webp'),
-(2, 'DAHUA', 'DVR Dahua', 6, 'Equipos', '20900', 'https://i.ibb.co/LJzSz9f/E2.webp'),
-(3, 'DAHUA', 'Camara 3mpx', 34, 'Camaras', '30000', 'https://i.ibb.co/19KG1GP/C2.webp'),
+(1, 'DAHUA - 1', 'Camara 2mpx', 20, 'Camaras', '23000', 'https://i.ibb.co/ygNPwx6/c4.webp'),
+(2, 'DAHUA DVR', 'DVR Dahua', 5, 'Equipos', '20900', 'https://i.ibb.co/LJzSz9f/E2.webp'),
+(3, 'DAHUA - 2', 'Camara 3mpx', 33, 'Camaras', '30000', 'https://i.ibb.co/19KG1GP/C2.webp'),
 (4, 'HIKVISION', 'Camara 4mpx', 14, 'Camaras', '21000', 'https://i.ibb.co/wShpvTg/C3.webp'),
-(5, 'DAHUA', 'DVR 4108', 30, 'Equipos', '30000', 'https://i.ibb.co/SXwW8g6/E1.webp'),
+(5, 'DAHUA', 'DVR 4108', 13, 'Equipos', '30000', 'https://i.ibb.co/SXwW8g6/E1.webp'),
 (6, 'DAHUA', 'DVR 4104', 10, 'Equipos', '18000', 'https://i.ibb.co/LJzSz9f/E2.webp'),
-(7, 'DAHUA', 'Camara Domo 2mpx', 29, 'Camaras', '20000', 'https://i.ibb.co/ygNPwx6/c4.webp'),
+(7, 'DAHUA - 3', 'Camara Domo 2mpx', 29, 'Camaras', '20000', 'https://i.ibb.co/ygNPwx6/c4.webp'),
 (8, 'HIKVISION', 'Camara Domo 5mpx', 50, 'Camaras', '32000', 'https://i.ibb.co/VQwtyXG/C5.webp'),
 (9, 'DAHUA', 'DVR XV08', 30, 'Equipos', '30000', 'https://i.ibb.co/LJzSz9f/E2.webp'),
-(10, 'WD', 'Disco duro 1tb', 35, 'Accesorios', '35000', 'https://i.ibb.co/CpyN3tZ/A1.webp');
+(10, 'WD - Disco', 'Disco duro 1tb', 45, 'Accesorios', '35000', 'https://i.ibb.co/CpyN3tZ/A1.webp');
 
 -- --------------------------------------------------------
 
@@ -269,14 +283,11 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `usnombre`, `uspass`, `usmail`, `usdeshabilitado`) VALUES
-(1, 'Bruno', 'e10adc3949ba59abbe56e057f20f883e', 'br@gmail.com', NULL),
-(2, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'br2@gmail.com', NULL),
-(3, 'Enzo Perez', '8c531d5ff27a37d697d53cab360ccf15', 'eperez@gmail.com', '2022-11-12 12:48:30'),
-(23, 'pepa', 'c4ca4238a0b923820dcc509a6f75849b', 'pepa@pepa.com', NULL),
-(24, 'Bruce', 'c4ca4238a0b923820dcc509a6f75849b', 'bruce@gmail.com', NULL),
-(25, 'cliente', '202cb962ac59075b964b07152d234b70', 'cliente@correo.ar', '2022-12-04 12:06:12'),
-(26, 'maria', 'c4ca4238a0b923820dcc509a6f75849b', 'mar@gmail.com', '2022-12-04 12:06:04'),
-(27, 'depo', 'c4ca4238a0b923820dcc509a6f75849b', 'doo@gmail.com', '2022-12-02 05:00:41');
+(1, 'Veronica', 'e10adc3949ba59abbe56e057f20f883e', 'sonoiovero.bis@gmail.com', NULL),
+(2, 'Admin', 'e10adc3949ba59abbe56e057f20f883e', 'veronica.arce@est.fi.uncoma.edu.ar', NULL),
+(3, 'Pepa', 'e10adc3949ba59abbe56e057f20f883e', 'sonoiovero@hotmail.com', NULL),
+(4, 'Carlos', 'e10adc3949ba59abbe56e057f20f883e', 'sonoiovero@hotmail.com', NULL),
+(5, 'Maria', 'e10adc3949ba59abbe56e057f20f883e', 'sonoiovero.bis@gmail.com', NULL);
 
 -- --------------------------------------------------------
 
@@ -294,22 +305,11 @@ CREATE TABLE `usuariorol` (
 --
 
 INSERT INTO `usuariorol` (`idusuario`, `idrol`) VALUES
-(1, 1),
-(1, 2),
 (1, 3),
 (2, 1),
-(2, 2),
-(2, 3),
-(3, 1),
 (3, 2),
-(23, 1),
-(23, 2),
-(23, 3),
-(24, 1),
-(24, 2),
-(25, 2),
-(26, 2),
-(27, 2);
+(4, 2),
+(5, 2);
 
 --
 -- Índices para tablas volcadas
@@ -400,43 +400,43 @@ ALTER TABLE `usuariorol`
 -- AUTO_INCREMENT de la tabla `compra`
 --
 ALTER TABLE `compra`
-  MODIFY `idcompra` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idcompra` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `compraestado`
 --
 ALTER TABLE `compraestado`
-  MODIFY `idcompraestado` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `idcompraestado` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
 
 --
 -- AUTO_INCREMENT de la tabla `compraitem`
 --
 ALTER TABLE `compraitem`
-  MODIFY `idcompraitem` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idcompraitem` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `idmenu` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `idmenu` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `idproducto` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `idproducto` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `idrol` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idrol` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `idusuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
 -- Restricciones para tablas volcadas
