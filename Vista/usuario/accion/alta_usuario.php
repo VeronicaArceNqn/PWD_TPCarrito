@@ -7,8 +7,8 @@ if ($data['usnombre']!="null" && $data['usmail']!="null"){
           $objC = new ABMUsuario();
           $objUsuario = $objC->buscar(['usnombre'=>$data['usnombre']]);
           
-          print_r($data);
-          print_r(count($objUsuario));
+          // print_r($data);
+          // print_r(count($objUsuario));
           if (count($objUsuario)>0){
           
               $mensaje = " La accion  ALTA No pudo concretarse";              
@@ -19,7 +19,7 @@ if ($data['usnombre']!="null" && $data['usmail']!="null"){
               //le asignamos rol de cliente
               $datos["idrol"]=2;
               $okRol = $objC->alta_rol($datos); 
-              print_r($okRol);
+              // print_r($okRol);
               if($okRol)
                 {
                   $respuesta=$okRol;

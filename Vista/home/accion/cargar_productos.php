@@ -7,7 +7,10 @@ $data = data_submitted();
 $objSesion = new Session();
 
 $idusuario=$objSesion->getUsuario()->getidusuario();
-
+$objUsuroles=$objSesion->getRol();
+foreach($objUsuroles as $objusurol){// obtengo el rol para luego filtar el botón Agregar
+    $rodescrip = $objusurol->getobjrol()->getrodescripcion();
+}
 
 $objCtrlProducto = new ABMproducto();
 $param=null;
@@ -36,8 +39,11 @@ foreach ($lista as $objProducto) {
             <h6 class="card-text txt-secondary"><?php echo $objProducto->getProdetalle(); ?></h6>
             <h4 class="card-text text-primary font-weight-bold"><?php echo $objProducto->getPrecio(); ?>$</h4>
             <h6 class="text-success font-weight-bold"><?php echo $objProducto->getProcantstock(); ?> disponibles</h6>
-            <a href="javascript:void(0)" class="btn btn-warning font-weight-bold" onclick="agregarItem(<?php echo  $objProducto->getIdproducto(); ?>,1)">Agregar</a>
-            
+            <?php
+            if ($rodescrip == "Cliente"){
+            echo '<a href="javascript:void(0)" class="btn btn-warning font-weight-bold" onclick="agregarItem('. $objProducto->getIdproducto().',1)">Agregar</a>';
+            }
+             ?>
         </div>
     </div>
 <?php } ?>

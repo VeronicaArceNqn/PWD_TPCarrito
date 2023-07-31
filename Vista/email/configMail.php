@@ -60,7 +60,7 @@ function enviarEmail(){
         }
     }
 } 
-function volver(){
-    header("Location: ../compra/listaCompras.php");
-    exit;
-}   
+// function volver(){
+//     header("Location: ../compra/listaCompras.php");
+//     exit;
+// }   
